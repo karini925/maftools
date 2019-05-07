@@ -198,7 +198,7 @@ annovarToMaf = function(annovar, Center = NULL, refBuild = 'hg19', tsbCol = NULL
 
   #Annovar ensGene doesn't provide HGNC gene symbols as Hugo_Symbol. We will change them manually.
   if(table == 'ensGene'){
-    ens = system.file('extdata', 'ensGenes.txt.gz', package = 'maftools')
+    ens = system.file('extdata', 'ensGenes.txt', package = 'maftools')
     cat('-Converting Ensemble Gene IDs into HGNC gene symbols\n')
     ens = data.table::fread(file =  ens, sep = '\t', stringsAsFactors = FALSE)
 
